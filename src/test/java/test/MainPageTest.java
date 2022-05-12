@@ -3,9 +3,7 @@ package test;
 import io.qameta.allure.Description;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import MainForm;
-
-
+import pages.MainForm;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.withText;
@@ -17,21 +15,14 @@ public class MainPageTest extends TestBase {
 
     MainForm mainForm = new MainForm();
 
+    @Test
+    @Description("Checking the logo on the main page wildberries in the top menu")
+    @DisplayName("Check logo wildberries")
+    void checkLogoTest() {
+        mainForm.openPage()
+                .checkLogo();
+    }
 
-
-
-    /*@Test
-    @Description("Check logo wildberries")
-    @DisplayName("Check logo wildberries")*/
-
-   /* void checkLogoTest() {
-        step("Открыть https://www.wildberries.ru/", () -> {
-            open("https://www.wildberries.ru/");
-        });
-        step("Проверить что есть элемент с классом logo и он видимый", () -> {
-            $(".nav-element__logo").should(Condition.visible);
-        });
-    }*/
 
     @Test
     @Description("Check search text 'сумка'")
