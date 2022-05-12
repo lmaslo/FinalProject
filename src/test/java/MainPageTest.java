@@ -73,11 +73,19 @@ public class MainPageTest extends TestBase {
     }
 
     @Test
-    void checkMenu() {
+    void checkMenuBurger() {
         open("https://www.wildberries.ru/");
         $(".nav-element__burger").click();
         $(withText("Аксессуары")).click();
         $(".catalog-title").shouldHave(text("Аксессуары"));
+    }
+
+    @Test
+    void SearchForPhoto() {
+        open("https://www.wildberries.ru/");
+        $(".search-catalog__btn--photo").click();
+        $("[type=file]").uploadFromClasspath("photo.jpg");
+        $(".searching-results-title").shouldHave(text("Поиск по фото"));
     }
 
 
