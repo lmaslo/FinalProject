@@ -17,6 +17,10 @@ public class MainPageTest extends TestBase {
     String textForSearch = "Сумка";
     String textDeliveryTitle = "Информация о доставке и пунктах выдачи";
     String textErrorMessage = "Введите номер телефона!";
+    String titlePage = "Аксессуары";
+    String fileName = "photo.jpg";
+    String titleSearchPhoto = "Поиск по фото";
+
 
     @Test
     @Description("Checking the logo on the main page wildberries in the top menu")
@@ -56,18 +60,16 @@ public class MainPageTest extends TestBase {
 
     @Test
     void checkMenuBurger() {
-        open("https://www.wildberries.ru/");
-        $(".nav-element__burger").click();
-        $(withText("Аксессуары")).click();
-        $(".catalog-title").shouldHave(text("Аксессуары"));
+        mainForm.openPage()
+                .openPageInMenuBurger(titlePage)
+                .checkPageTitle(titlePage);
     }
 
     @Test
     void SearchForPhoto() {
-        open("https://www.wildberries.ru/");
-        $(".search-catalog__btn--photo").click();
-        $("[type=file]").uploadFromClasspath("photo.jpg");
-        $(".searching-results-title").shouldHave(text("Поиск по фото"));
+        mainForm.openPage()
+                .searchWithPhoto(fileName)
+                .checkSearchPhotoTitle(titleSearchPhoto);
     }
 
 

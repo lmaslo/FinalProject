@@ -5,6 +5,7 @@ import com.codeborne.selenide.SelenideElement;
 
 
 import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
@@ -21,6 +22,11 @@ public class MainForm {
     private SelenideElement linkPageAuth = $(".j-main-login");
     private SelenideElement buttonGetCode = $("#requestCode");
     private SelenideElement errorMessage = $(".j-error-full-phone");
+    private SelenideElement menuBurger = $(".nav-element__burger");
+    private SelenideElement catalogTitle = $(".catalog-title");
+    private SelenideElement searchWithPhoto = $(".search-catalog__btn--photo");
+    private SelenideElement photoInput = $("[type=file]");
+    private SelenideElement searchPhotoResultTitle = $(".searching-results-title");
 
 
     //actions
@@ -86,10 +92,35 @@ public class MainForm {
         });
         return this;
     }
+
+    public MainForm openPageInMenuBurger(String titlePage) {
+        step("Перейти на страницу " + titlePage + " через меню", () -> {
+            menuBurger.click();
+            $(withText(titlePage)).click();
+        });
+        return this;
+    }
+
+    public MainForm checkPageTitle(String titlePage) {
+        step("Проверить текст заголовка страницы " + titlePage, () -> {
+            catalogTitle.shouldHave(text(titlePage));
+        });
+        return this;
+    }
+
+    public MainForm searchWithPhoto(String fileName) {
+        step("Загружаем файл для поиска. Выполнить поиск", () -> {
+            searchWithPhoto.click();
+            photoInput.uploadFromClasspath(fileName);
+        });
+        return this;
+    }
+
+    public MainForm checkSearchPhotoTitle(String titleSearchPhoto) {
+        step("Проверить что появился текст «" + titleSearchPhoto, () -> {
+            searchPhotoResultTitle.shouldHave(text(titleSearchPhoto));
+            ;
+        });
+        return this;
+    }
 }
-
-/*        open("https://www.wildberries.ru/");
-        $(".nav-element__burger").click();
-        $(withText("Аксессуары")).click();
-        $(".catalog-title").shouldHave(text("Аксессуары"));*/
-
