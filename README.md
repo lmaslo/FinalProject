@@ -34,3 +34,21 @@
 <img width="6%" title="Jenkins" src="images/logo/Jenkins.svg">
 <img width="6%" title="Telegram" src="images/logo/Telegram.svg">
 </p>
+
+## Jenkins job
+<img src="image/logo/Jenkins.svg" width="25" height="25"  alt="Jenkins"/></a>  <a target="_blank" href="https://jenkins.autotests.cloud/job/011-maslogirl-FinalProject/">Jenkins job</a>
+<p align="center">
+<a href="https://jenkins.autotests.cloud/job/011-maslogirl-FinalProject/"><img src="images/image/Jenkins.jpg" alt="Jenkins"/></a>
+</p>
+
+
+###  Параметры сборки в Jenkins:
+
+- REPOSITORY  (репозиторий для сборки)
+- BROWSER (браузер, по умолчанию chrome)
+- BROWSER_VERSION (версия браузера, по умолчанию 100.0)
+- BROWSER_SIZE (размер окна браузера, по умолчанию 1920x1080)
+- REMOTE_DRIVER_URL (логин, пароль и адрес удаленного сервера selenoid)
+- THREADS (количество потоков для запуска тестов, по умолчанию 5)
+- BRANCH (по умолчанию main)
+
