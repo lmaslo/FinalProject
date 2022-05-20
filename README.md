@@ -5,7 +5,7 @@
 
 - [Реализованные проверки](#boom-Реализованные-проверки)
 - [Технологии](#classical_building-Технологии)
-- [Сборка в Jenkins](#Jenkins-job)
+- [Сборка в Jenkins](#man_cook-Jenkins-job)
 - [Запуск из терминала](#man_cook-Запуск-тестов-из-терминала)
 - [Allure отчет](#earth_africa-Allure-отчет)
 - [Отчет в Telegram](#envelope-Уведомление-в-Telegram-при-помощи-бота)
@@ -35,7 +35,7 @@
 <img width="6%" title="Telegram" src="images/logo/Telegram.svg">
 </p>
 
-## Jenkins job
+## :man_cook: Jenkins job
 <img src="images/logo/Jenkins.svg" width="25" height="25"  alt="Jenkins"/></a>  <a target="_blank" href="https://jenkins.autotests.cloud/job/011-maslogirl-FinalProject/">Jenkins job</a>
 <p align="center">
 <a href="https://jenkins.autotests.cloud/job/011-maslogirl-FinalProject/"><img src="images/image/Jenkins.jpg" alt="Jenkins"/></a>
