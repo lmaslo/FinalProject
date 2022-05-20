@@ -6,7 +6,7 @@
 - [Реализованные проверки](#boom-Реализованные-проверки)
 - [Технологии](#classical_building-Технологии)
 - [Сборка в Jenkins](#Jenkins-job)
-- [Запуск из терминала](#earth_africa-Запуск-тестов-из-терминала)
+- [Запуск из терминала](#man_cook-Запуск-тестов-из-терминала)
 - [Allure отчет](#earth_africa-Allure-отчет)
 - [Отчет в Telegram](#envelope-Уведомление-в-Telegram-при-помощи-бота)
 - [Видео пример](#video_camera-Видео)
@@ -36,7 +36,7 @@
 </p>
 
 ## Jenkins job
-<img src="image/logo/Jenkins.svg" width="25" height="25"  alt="Jenkins"/></a>  <a target="_blank" href="https://jenkins.autotests.cloud/job/011-maslogirl-FinalProject/">Jenkins job</a>
+<img src="images/logo/Jenkins.svg" width="25" height="25"  alt="Jenkins"/></a>  <a target="_blank" href="https://jenkins.autotests.cloud/job/011-maslogirl-FinalProject/">Jenkins job</a>
 <p align="center">
 <a href="https://jenkins.autotests.cloud/job/011-maslogirl-FinalProject/"><img src="images/image/Jenkins.jpg" alt="Jenkins"/></a>
 </p>
@@ -51,4 +51,26 @@
 - REMOTE_DRIVER_URL (логин, пароль и адрес удаленного сервера selenoid)
 - THREADS (количество потоков для запуска тестов, по умолчанию 5)
 - BRANCH (по умолчанию main)
+
+## :man_cook: Запуск тестов из терминала
+
+Локальный запуск:
+```
+gradle clean test
+```
+
+Удаленный запуск:
+```
+clean
+test
+-Dbrowser=${BROWSER}
+-DbrowserVersion=${BROWSER_VERSION}
+-DbrowserSize=${BROWSER_SIZE}
+-DbrowserMobileView="${BROWSER_MOBILE}"
+-DremoteDriverUrl=https://user1:1234@${REMOTE_DRIVER_URL}/wd/hub/
+-DvideoStorage=https://${REMOTE_DRIVER_URL}/video/
+-Dthreads=${THREADS}
+```
+
+:bar_chart:
 
