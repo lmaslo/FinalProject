@@ -3,12 +3,19 @@ package test;
 import io.qameta.allure.Description;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import pages.AddressForm;
+import pages.AuthForm;
 import pages.MainForm;
+import pages.SearchResultForm;
 
 
 public class MainPageTest extends TestBase {
 
     MainForm mainForm = new MainForm();
+    SearchResultForm searchResultForm = new SearchResultForm();
+    AddressForm addressForm = new AddressForm();
+    AuthForm authForm = new AuthForm();
+
     String textForSearch = "Сумка";
     String textDeliveryTitle = "Информация о доставке и пунктах выдачи";
     String textErrorMessage = "Введите номер телефона!";
@@ -30,8 +37,8 @@ public class MainPageTest extends TestBase {
     @DisplayName("Check search ")
     void checkSearchTest() {
         mainForm.openPage()
-                .searchText(textForSearch)
-                .checkSearchTitle(textForSearch);
+                .searchText(textForSearch);
+        searchResultForm.checkSearchTitle(textForSearch);
     }
 
     @Test
@@ -39,8 +46,8 @@ public class MainPageTest extends TestBase {
     @DisplayName("Check Tab location")
     void checkHeaderLocationTest() {
         mainForm.openPage()
-                .goToPageAddress()
-                .checkDeliveryTitle(textDeliveryTitle);
+                .goToPageAddress();
+        addressForm.checkDeliveryTitle(textDeliveryTitle);
     }
 
     @Test
@@ -48,24 +55,22 @@ public class MainPageTest extends TestBase {
     @DisplayName("Check error auth")
     void checkAuthTest() {
         mainForm.openPage()
-                .goToPageAuth()
-                .authWithOutPhone()
+                .goToPageAuth();
+        authForm.authWithOutPhone()
                 .checkErrorMessage(textErrorMessage);
     }
 
     @Test
     void checkMenuBurger() {
         mainForm.openPage()
-                .openPageInMenuBurger(titlePage)
-                .checkPageTitle(titlePage);
+                .openPageInMenuBurger(titlePage);
+        searchResultForm.checkPageTitle(titlePage);
     }
 
     @Test
     void SearchForPhoto() {
         mainForm.openPage()
-                .searchWithPhoto(fileName)
-                .checkSearchPhotoTitle(titleSearchPhoto);
+                .searchWithPhoto(fileName);
+        searchResultForm.checkSearchPhotoTitle(titleSearchPhoto);
     }
-
-
 }
