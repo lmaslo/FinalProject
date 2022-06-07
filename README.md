@@ -79,9 +79,7 @@ test
 <p align="center">
 <a href="https://allure.autotests.cloud/project/1375/dashboards"><img src="images/image/Allure3.jpg" alt="Allure-отчет"/></a>
 </p>
-<p align="center">
-<a href="https://jenkins.autotests.cloud/job/011-maslogirl-FinalProject/3/allure/#suites/f65ff973144ec53ed351dc6a47db7338/b8f9bddb75fae127/"><img src="images/image/Allure.jpg" alt="Allure-отчет"/></a>
-</p>
+
 
 
 ## Allure TestOps
@@ -89,7 +87,7 @@ test
 <a href="https://jenkins.autotests.cloud/job/011-maslogirl-FinalProject/3/allure/#graph"><img src="/images/image/TestOps1.jpg" alt="TestOps"/></a>
 </p>
 <p align="center">
-<a href="https://allure.autotests.cloud/project/1375/test-cases?treeId=2627"><img src="/images/image/TestOps2.jpg" alt="TestOps"/></a>
+<a href="https://allure.autotests.cloud/project/1375/test-cases?treeId=2627"><img src="/images/image/TestOps3.jpg" alt="TestOps"/></a>
 </p>
 
 
