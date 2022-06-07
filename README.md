@@ -84,7 +84,7 @@ test
 
 ## Allure TestOps
 <p align="center">
-<a href="https://jenkins.autotests.cloud/job/011-maslogirl-FinalProject/3/allure/#graph"><img src="/images/image/TestOps1.jpg" alt="TestOps"/></a>
+<a href="https://allure.autotests.cloud/project/1375/test-cases?treeId=2627"><img src="/images/image/TestOps1.jpg" alt="TestOps"/></a>
 </p>
 <p align="center">
 <a href="https://allure.autotests.cloud/project/1375/test-cases?treeId=2627"><img src="/images/TestOps3.jpg" alt="TestOps"/></a>
