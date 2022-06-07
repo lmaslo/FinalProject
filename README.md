@@ -8,6 +8,7 @@
 - [Сборка в Jenkins](#man_cook-Jenkins-job)
 - [Запуск из терминала](#electron-Запуск-тестов-из-терминала)
 - [Allure отчет](#bar_chart-Allure-отчет)
+- [Allure TestOps](#Allure-TestOps)
 - [Отчет в Telegram](#envelope-Уведомление-в-Telegram-при-помощи-бота)
 
 ## :boom: Реализованные проверки
@@ -32,6 +33,7 @@
 <img width="6%" title="GitHub" src="images/logo/GitHub.svg">
 <img width="6%" title="Jenkins" src="images/logo/Jenkins.svg">
 <img width="6%" title="Telegram" src="images/logo/Telegram.svg">
+  <img width="6%" title="Telegram" src="images/logo/Allure_TO.svg">
 </p>
 
 ## :man_cook: Jenkins job
@@ -75,13 +77,20 @@ test
 ## :bar_chart: Allure-отчет
 <img src="images/logo/Allure.svg" width="25" height="25"  alt="Allure"/></a> Отчет в <a target="_blank" href="https://jenkins.autotests.cloud/job/011-maslogirl-FinalProject/3/allure/#graph">Allure report</a>
 <p align="center">
-<a href="https://jenkins.autotests.cloud/job/011-maslogirl-FinalProject/3/allure/#graph"><img src="images/image/Allure3.jpg" alt="Jenkins"/></a>
+<a href="https://allure.autotests.cloud/project/1375/dashboards"><img src="images/image/Allure3.jpg" alt="Allure-отчет"/></a>
 </p>
 <p align="center">
-<a href="https://jenkins.autotests.cloud/job/011-maslogirl-FinalProject/3/allure/#suites/f65ff973144ec53ed351dc6a47db7338/b8f9bddb75fae127/"><img src="images/image/Allure.jpg" alt="Jenkins"/></a>
+<a href="https://jenkins.autotests.cloud/job/011-maslogirl-FinalProject/3/allure/#suites/f65ff973144ec53ed351dc6a47db7338/b8f9bddb75fae127/"><img src="images/image/Allure.jpg" alt="Allure-отчет"/></a>
 </p>
 
 
+## Allure TestOps
+<p align="center">
+<a href="https://jenkins.autotests.cloud/job/011-maslogirl-FinalProject/3/allure/#graph"><img src="/images/image/TestOps1.jpg" alt="TestOps"/></a>
+</p>
+<p align="center">
+<a href="https://allure.autotests.cloud/project/1375/test-cases?treeId=2627"><img src="/images/image/TestOps2.jpg" alt="TestOps"/></a>
+</p>
 
 
 ## :envelope: Уведомление-в-Telegram-при-помощи-бота
