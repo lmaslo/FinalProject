@@ -33,7 +33,7 @@
 <img width="6%" title="GitHub" src="images/logo/GitHub.svg">
 <img width="6%" title="Jenkins" src="images/logo/Jenkins.svg">
 <img width="6%" title="Telegram" src="images/logo/Telegram.svg">
-  <img width="6%" title="Telegram" src="images/logo/Allure_TO.svg">
+  <img width="6%" title="Allure_TO" src="images/logo/Allure_TO.svg">
 </p>
 
 ## :man_cook: Jenkins job
